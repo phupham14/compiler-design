@@ -3,15 +3,36 @@
 
 #define MAX_TOKEN_LENGTH 100
 
-typedef enum {
-    PLUS, MINUS, TIMES, SLASH,
-    EQU, NEQ, LSS, LEQ, GTR, GEQ,
-    LPARENT, RPARENT, LBRACK, RBRACK,
-    ASSIGN, SEMICOLON, COMMA, PERIOD, PERCENT,
-    IDENT, NUMBER, KEYWORD, EOF_TOKEN, UNKNOWN
+typedef enum
+{
+    PLUS,
+    MINUS,
+    TIMES,
+    SLASH,
+    EQU,
+    NEQ,
+    LSS,
+    LEQ,
+    GTR,
+    GEQ,
+    LPARENT,
+    RPARENT,
+    LBRACK,
+    RBRACK,
+    ASSIGN,
+    SEMICOLON,
+    COMMA,
+    PERIOD,
+    PERCENT,
+    IDENT,
+    NUMBER,
+    KEYWORD,
+    EOF_TOKEN,
+    UNKNOWN
 } TokenType;
 
-typedef struct {
+typedef struct
+{
     TokenType type;
     char value[MAX_TOKEN_LENGTH];
 } Token;
